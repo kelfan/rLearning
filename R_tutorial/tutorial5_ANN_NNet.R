@@ -39,9 +39,9 @@ print() # install.packages("nnet") # C:\Users\Administrator\AppData\Local\Temp\R
 library(nnet)
 model.nnet <- nnet(Type ~ ., 
                    data = data.tr,
-                   size=2,
+                   size=2, # 2 level 
                    decay=5e-04,
-                   maxit=200)
+                   maxit=200) # stopped after 200 iterations
 summary(model.nnet)
 
 # pattern (model) evaluation 
