@@ -77,3 +77,8 @@ predicted <- predict(model.nnet,
                      x.test,
                      type="class")
 predicted
+
+
+# read xlxs excel 
+require(gdata)
+df = read.csv("2 Day Annotations.csv", header = TRUE)
