@@ -82,3 +82,40 @@ predicted
 # read xlxs excel 
 require(gdata)
 df = read.csv("2 Day Annotations.csv", header = TRUE)
+
+# datetime to seconds 
+# package lubridate
+require(lubridate)
+
+lubridate::period_to_seconds(lubridate::hms("12:12:54"))
+
+# define function to change datetime to seconds
+time_to_second <- function(x){
+  lubridate::period_to_seconds(lubridate::hms(x))
+}
+
+# apply function to each rows 
+<<<<<<< HEAD
+<<<<<<< HEAD
+start_list <- sapply(df$Recording.Start.Time, time_to_second)
+end_list <- sapply(df$Recording.End.Time, time_to_second)
+=======
+=======
+>>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
+start_list <- sapply(df$event_start_time_utc, time_to_second)
+end_list <- sapply(df$event_start_time_utc, time_to_second) + 50
+
+start_list = end_list-50000
+end_list = start_list + 50
+<<<<<<< HEAD
+>>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
+=======
+>>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
+
+# read each rows of mp3 files
+result <- vector()
+a <- readMP3("bb.mp3")
+for(e in 1:90){
+  each = sample(a@left[start_list[e]:end_list[e]], 10)
+  result = rbind(result, each)
+}
