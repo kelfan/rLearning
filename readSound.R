@@ -97,9 +97,12 @@ time_to_second <- function(x){
 # apply function to each rows 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 start_list <- sapply(df$Recording.Start.Time, time_to_second)
 end_list <- sapply(df$Recording.End.Time, time_to_second)
 =======
+=======
+>>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
 =======
 >>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
 start_list <- sapply(df$event_start_time_utc, time_to_second)
@@ -108,6 +111,9 @@ end_list <- sapply(df$event_start_time_utc, time_to_second) + 50
 start_list = end_list-50000
 end_list = start_list + 50
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
+=======
 >>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
 =======
 >>>>>>> 2624b28d1d5d7d27e55b36bb9b430a3b1bb89f10
