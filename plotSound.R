@@ -62,12 +62,16 @@ setwd("C:\\Users\\jzheng4\\Desktop\\git\\rLearning")
 library(tuneR)
 library(seewave)
 song <- readMP3("song.mp3")
-ss <- song[50000:60000]
+ss <- song[50000:54451]
 viewSpec(ss) # only black and white
 viewSpec(ss, spec.col = rainbow.1())
+viewSpec(song, spec.col = rainbow.1())
 
 install.packages("monitoR")
 library(monitoR)
 data(survey)
 viewSpec(survey)
 
+
+# case
+# https://www.r-project.org/conferences/useR-2009/slides/Sueur+Aubin+Simonis.pdf
