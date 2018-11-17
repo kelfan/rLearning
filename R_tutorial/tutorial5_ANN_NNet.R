@@ -21,7 +21,8 @@ print(summary(wine))
 wine.scale <- cbind(wine[1], scale(wine[-1])) # cbind 横向追加 rbind 纵向追加
 print(summary(wine.scale))
 
-apply(wine.scale[-1], 2, sd) # 显示边缘值 这里全部是1
+# 显示各个特征的标准方差, 确保每个都是一样的, 不然就是某个特征的scale不正确
+apply(wine.scale[-1], 2, sd) # 显示标准方差值 这里全部是1
 
 # partitioning the data into training and test data
 data.size <- nrow(wine.scale) # 设定大小为行数 
